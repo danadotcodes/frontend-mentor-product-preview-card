@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Product Preview Card</title>
@@ -23,7 +28,7 @@
         </picture>
         <div class="card__content">
           <h1 class="card__title fs-lrg ff-accent">
-            <span class="card__category">Perfume</span>
+            <span class="card__category fs-sml">Perfume</span>
             Gabrielle Essence Eau De Parfum
           </h1>
           <p>
@@ -31,13 +36,16 @@
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
           <div class="flex-group">
-            <p class="card__current-price fs-lrg ff-accent">$149.99</p>
+            <p class="card__current-price fs-lrg ff-accent">
+              <span class="sr-only">Current price:</span>
+              $149.99
+            </p>
             <p class="card__original-price">
               <span class="sr-only">Original price:</span>
               <s>$169.99</s>
             </p>
           </div>
-          <button class="button">Add to Cart</button>
+          <button class="button" data-icon="cart">Add to Cart</button>
         </div>
       </article>
     </main>
