@@ -114,7 +114,7 @@ body {
   text-decoration: none;
   border: none;
   border-radius: 0.5em;
-  padding: 0.938em 0;
+  padding: 0.938em 0em;
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
@@ -136,12 +136,11 @@ body {
 .card {
   --content-padding: 1.5rem;
   --content-gap: 1rem;
+  display: grid;
   background-color: var(--clr-neutral-100);
   border-radius: 0.625rem;
   overflow: hidden;
-}
-
-.card__img {
+  max-width: 600px;
 }
 
 .card__content {
@@ -168,5 +167,15 @@ body {
   color: var(--clr-primary-400);
 }
 
-.card__original-price {
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 600px) {
+  .card {
+    --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button {
+    padding: 0.375em 1.5em;
+  }
 }
